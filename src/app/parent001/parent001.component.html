@@ -1,0 +1,44 @@
+<!-- <div> Parent001 </div>
+
+<app-child001 [textFromParent]="message"></app-child001>
+<app-child001 (notify)="alreadySend($event)"></app-child001>
+
+
+{{showMessage}} -->
+
+<!-- <button (click)="getMovie()">Click Me</button> -->
+
+ <!-- ----------- Home Work -----------  -->
+ <form [formGroup]="form" (ngSubmit)="submit()">
+    <div style="margin-bottom: 5%; margin-top: 20%;">
+        <div>
+             <input formControlName="id" (keyup)="submit()"style="margin-bottom: 5%;">
+        </div>
+            <app-child001 (movieData)="onMovieData($event)" [movieId]="movieId"></app-child001>
+    </div>
+  </form>
+  
+<div style="margin-top: 5%;">
+    <table class="my-table">
+        <thead>
+          <tr>
+            <th>NameMovie</th>
+            <th>TypeMovie</th>
+            <th>MoviePrice</th>
+            <th>Movieid</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{ movieName }}</td>
+            <td>{{ movieType }}</td>
+            <td>{{ moviePrice }}</td>
+            <td>{{ movieName }}</td>
+          </tr>
+        </tbody>
+      </table>
+      
+</div>
+  
+
+
